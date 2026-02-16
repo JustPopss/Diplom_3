@@ -1,21 +1,26 @@
-import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Test;
 
 public class RegistrationTest {
 
-    Utility utility = new Utility();
+    UtilitySelenide utilitySelenide = new UtilitySelenide();
+    UtilityApi utilityApi = new UtilityApi();
+    UserModel userModel = new UserModel(
+            UserModel.EMAIL,
+            UserModel.PASSWORD,
+            UserModel.NAME);
 
     @Test
-    @Step ("Registration test")
+    @DisplayName ("Registration test")
     public void registrationTest () {
-        utility.registration();
+        utilitySelenide.registration();
     }
 
     @After
-    @Step("Login user for token and delete")
+    @DisplayName("Login user for token and delete")
     public void deleteUser () {
-        utility.loginUser();
-        utility.deleteUser();
+        utilityApi.loginUser(userModel);
+        utilityApi.deleteUser();
     }
 }

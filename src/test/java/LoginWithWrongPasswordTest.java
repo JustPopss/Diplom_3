@@ -1,13 +1,13 @@
-import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
 public class LoginWithWrongPasswordTest {
 
-    Utility utility = new Utility();
+    UtilitySelenide utilitySelenide = new UtilitySelenide();
 
     @Test
-    @Step ("Login with invalid password")
+    @DisplayName("Login with invalid password")
     public void loginWithWrongPassword() {
-        utility.loginWithWrongPassword();
+        utilitySelenide.loginWithWrongPassword();
     }
 }

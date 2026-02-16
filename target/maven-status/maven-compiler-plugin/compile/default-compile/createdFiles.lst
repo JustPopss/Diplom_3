@@ -1,2 +1,7 @@
-PageObjectsModel.class
-Utility.class
+MainPageObjectsModel.class
+UtilitySelenide.class
+LoginPageObjectsModel.class
+UserModel.class
+OthersPO.class
+UtilityApi.class
+FieldPageObjectsModel.class

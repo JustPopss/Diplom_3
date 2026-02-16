@@ -1,9 +1,4 @@
-LoginResetPasswordPageTest.class
+CheckVisibleElementsTest.class
 LoginWithWrongPasswordTest.class
 RegistrationTest.class
-LoginPersonalButtonTest.class
-VisibleElementBulkiTest.class
-VisibleElementSousesTest.class
-LoginMainPageTest.class
-LoginRegistrationPageTest.class
-VisibleElementNachinkeTest.class
+LoginTest.class
