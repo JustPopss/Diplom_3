@@ -3,11 +3,11 @@ import org.junit.Test;
 
 public class LoginWithWrongPasswordTest {
 
-    UtilitySelenide utilitySelenide = new UtilitySelenide();
+    LoginPageObjectsModel lom = new LoginPageObjectsModel();
 
     @Test
     @DisplayName("Login with invalid password")
     public void loginWithWrongPassword() {
-        utilitySelenide.loginWithWrongPassword();
+        lom.loginWithWrongPassword();
     }
 }

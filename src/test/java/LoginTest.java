@@ -6,7 +6,8 @@ import org.junit.Test;
 public class LoginTest {
 
     UtilityApi utilityApi = new UtilityApi();
-    UtilitySelenide utilitySelenide = new UtilitySelenide();
+    LoginPageObjectsModel lom = new LoginPageObjectsModel();
+
     UserModel userModel = new UserModel(
             UserModel.EMAIL,
             UserModel.PASSWORD,
@@ -21,25 +22,25 @@ public class LoginTest {
     @Test
     @DisplayName("Login with valid data on main page")
     public void loginMainPageTest() {
-        utilitySelenide.loginMainPage();
+        lom.loginMainPage();
     }
 
     @Test
     @DisplayName("Login on personal page")
     public void loginPersonalButtonTest() {
-        utilitySelenide.loginPersonalButton();
+        lom.loginPersonalButton();
     }
 
     @Test
     @DisplayName("Login on registration page")
     public void loginRegistrationPageTest() {
-        utilitySelenide.loginRegistrationPage();
+        lom.loginRegistrationPage();
     }
 
     @Test
     @DisplayName("Login on reset password page")
     public void loginResetPasswordPageTest() {
-        utilitySelenide.loginResetPasswordPage();
+        lom.loginResetPasswordPage();
     }
 
     @After

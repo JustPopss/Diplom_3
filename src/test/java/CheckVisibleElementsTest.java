@@ -3,27 +3,27 @@ import org.junit.Test;
 
 public class CheckVisibleElementsTest {
 
-    UtilitySelenide utilitySelenide = new UtilitySelenide();
+    MainPageObjectsModel mom = new MainPageObjectsModel();
 
     @Test
     @DisplayName("Check element Bulki is visible")
 
-    public void visibleElementBulkiTest() {
-        utilitySelenide.visibleElementBulki();
+    public void visibleElementBunsTest() {
+        mom.visibleElementBuns();
     }
 
     @Test
     @DisplayName("Check element Nachinki is visible")
 
-    public void visibleElementNachinkiTest() {
-        utilitySelenide.visibleElementNachinki();
+    public void visibleElementFillingsTest() {
+        mom.visibleElementFillings();
     }
 
     @Test
     @DisplayName("Check element Souses is visible")
 
     public void visibleElementSousesTest() {
-        utilitySelenide.visibleElementSouses();
+        mom.visibleElementSouses();
     }
 
 }

@@ -5,14 +5,12 @@ import static io.restassured.RestAssured.given;
 
 public class UtilityApi {
 
-    MainPageObjectsModel pom = new MainPageObjectsModel();
-
     protected String accessToken;
 
     @Step("Create new user and take token")
     public void createNewUser(UserModel userModel) {
         accessToken = given()
-                .baseUri(pom.MAIN_PAGE)
+                .baseUri(MainPageObjectsModel.MAIN_PAGE)
                 .log().body()
                 .contentType(ContentType.JSON)
                 .body(userModel)
@@ -25,7 +23,7 @@ public class UtilityApi {
     @Step("Delete user")
     public void deleteUser() {
         given()
-                .baseUri(pom.MAIN_PAGE)
+                .baseUri(MainPageObjectsModel.MAIN_PAGE)
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer" + accessToken)
                 .log().all()
@@ -35,7 +33,7 @@ public class UtilityApi {
     @Step("Login user token for delete")
     public void loginUser(UserModel userModel) {
         accessToken = given()
-                .baseUri(pom.MAIN_PAGE)
+                .baseUri(MainPageObjectsModel.MAIN_PAGE)
                 .contentType(ContentType.JSON)
                 .body(userModel)
                 .header("Authorization", "Bearer" + accessToken)

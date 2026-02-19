@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class RegistrationTest {
 
-    UtilitySelenide utilitySelenide = new UtilitySelenide();
+    RegistrationPageObjectsModel rom = new RegistrationPageObjectsModel();
     UtilityApi utilityApi = new UtilityApi();
     UserModel userModel = new UserModel(
             UserModel.EMAIL,
@@ -14,7 +14,7 @@ public class RegistrationTest {
     @Test
     @DisplayName ("Registration test")
     public void registrationTest () {
-        utilitySelenide.registration();
+        rom.registration();
     }
 
     @After

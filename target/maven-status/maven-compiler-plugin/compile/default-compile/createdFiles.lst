@@ -1,7 +1,6 @@
-MainPageObjectsModel.class
-UtilitySelenide.class
-LoginPageObjectsModel.class
+RegistrationPageObjectsModel.class
 UserModel.class
-OthersPO.class
+PersonalPageObject.class
 UtilityApi.class
-FieldPageObjectsModel.class
+MainPageObjectsModel.class
+LoginPageObjectsModel.class
