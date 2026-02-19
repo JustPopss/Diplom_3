@@ -45,3 +45,6 @@ build/
 allure-report/
 !target/allure-results/
 !target/allure-results/**
+/target/maven-status/
+/target/surefire-reports/
+/target/test-classes/
